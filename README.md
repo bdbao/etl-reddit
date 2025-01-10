@@ -22,7 +22,7 @@ The pipeline is designed to:
 4. Load the transformed data into Amazon Redshift for analytics and querying.
 
 ## Architecture
-![RedditDataEngineering.png](assets%2FRedditDataEngineering.png)
+![RedditETL.png](assets/RedditETL.png)
 1. **Reddit API**: Source of the data.
 2. **Apache Airflow & Celery**: Orchestrates the ETL process and manages task distribution.
 3. **PostgreSQL**: Temporary storage and metadata management.
@@ -68,6 +68,11 @@ The pipeline is designed to:
    ```
 
 ## More steps:
+- With **fish**:
+  ```bash
+  python3.10 -m venv venv
+  source venv/bin/activate.fish
+  ```
 - How to Get `reddit_secret_key` and `reddit_client_id` for `config.conf`:
    ```
    ### 1. Log in to Reddit
@@ -137,3 +142,6 @@ The pipeline is designed to:
       - Complete the other settings and create the bucket.
    ```
 - Open localhost:8080 (username/pw is **admin**)
+- Check S3 at: https://us-east-1.console.aws.amazon.com/s3/home?region=us-east-1
+- Open: https://us-east-1.console.aws.amazon.com/gluestudio/home?region=us-east-1#/jobs
+  - 
