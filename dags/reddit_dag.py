@@ -11,8 +11,8 @@ from pipelines.aws_s3_pipeline import upload_s3_pipeline
 from pipelines.reddit_pipeline import reddit_pipeline
 
 default_args = {
-    'owner': 'Yusuf Ganiyu',
-    'start_date': datetime(2023, 10, 22)
+    'owner': 'Duy Bao',
+    'start_date': datetime(2024, 10, 22)
 }
 
 file_postfix = datetime.now().strftime("%Y%m%d")
@@ -46,3 +46,5 @@ upload_s3 = PythonOperator(
 )
 
 extract >> upload_s3
+
+# Ref: https://www.youtube.com/watch?v=LSlt6iVI_9Y
